@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src='https://code.jquery.com/jquery-3.2.1.min.js'
-        integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,22 +20,28 @@
         <!-- TORONTO OUTPUT SECTION BEGINS -->
         <section>
             <div class="infoWrapper">
-                <div id="output">
-                    <p>placeholder: AQI Rating</p>
+                <div class="infoBox healthy">
+                    <p class='valueName'>LABEL</p>
+                    <p class='pollutionValue'>value</p>
+                </div>
+                <div class="infoBox moderate">
+                    <p class='valueName'>LABEL</p>
+                    <p class='pollutionValue'>value</p>
+                </div>
+                <div class="infoBox unhealthy">
+                    <p class='valueName'>LABEL</p>
+                    <p class='pollutionValue'>value</p>
+                </div>
+                <div class="infoBox hazardous">
+                    <p class='valueName'>LABEL</p>
+                    <p class='pollutionValue'>value</p>
                 </div>
             </div>
         </section>
         <!-- TORONTO OUTPUT SECTION ENDS -->
-    
         <!-- MEDICAL DATA SECTION BEGINS -->
         <section>
             <div class="medicalWrapper">
-                <div class="medicalItem">
-                    <h3>Carbon Monoxyde</h3>
-                    <p>If breathed in, carbon monoxide blocks oxygen in the blood from being delivered to the rest of the body. Prolonged exposure can lead to brain damage and even death.
-                    It is released by the incomplete combustion of fuels such as natural gas, charcoal, gasoline, and tobacco.
-                    Sometimes referred to as the “silent killer”, carbon monoxide can for instance be released in homes by heating systems that do not work properly, claiming many lives every year.</p>
-                </div>
                 <div class="medicalItem">
                     <h3>Nitrogen Dioxide</h3>
                     <p>Nitrogen dioxide is part of a group of gaseous air pollutants produced as a result of road traffic and other fossil fuel combustion processes. Its presence in air contributes to the formation and modification of other air pollutants, such as ozone and particulate matter, and to acid rain.</p>
@@ -47,7 +51,7 @@
                     <p>At ground level , ozone is considered an air pollutant that can seriously affect the human respiratory system. It is a chemical oxidant and a major component of photochemical smog.
                     </p>
                 </div>
-                <div class="medicalItem">
+                <div class="medicalItem airParticulate">
                     <h3>Air Particulates PM10/PM2.5</h3>
                     <p>Particulate matter is the sum of all solid and liquid particles suspended in air many of which are hazardous. This complex mixture includes both organic and inorganic particles, such as dust, pollen, soot, smoke, and liquid droplets. These particles vary greatly in size, composition, and origin.</p>
                 </div>
@@ -71,10 +75,12 @@
     <!-- FOOTER SECTION BEGINS -->
     <footer>
         <div class="footerWrapper">
-            <p>&copy; 2020 <a href="" target="_blank">PUNEET BIRDI</a> & <a href="http://maximilianlau.com" target="_blank">MAXIMILIAN LAU</a>.</p>
+            <p>&copy; 2020 <a href="" target="_blank">PUNEET BIRDI</a> & <a href="http://maximilianlau.com" target="_blank">MAXIMILIAN LAU</a></p>
         </div>
     </footer>
     <!-- FOOTER SECTION ENDS -->
 </body>
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'
+integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
 <script src="airQuality.js"></script>
 </html>

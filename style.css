@@ -9,6 +9,8 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 
 /* ------------COLOR VARIABLES--------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
 :root{
     --healthy: #5caa71;
     --moderate: #809fbf;
@@ -18,17 +20,30 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     --background: #2B3964;
     --mainSectionBackground: #F7F5F3;
     --accentBlue: #809FBF;
-    --accentRed: #AC464A;
+    --accentPurple: #4c2f55;
     --accentYellow: #F2A31A;
 }
 
 html {
     font-size:62.5%;
+    font-family: Roboto, sans-serif;
 }
 
 h1 {
     color:white;
-    font-size:25rem;
+    font-size:12rem;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+h3{
+    font-size: 2.0rem;
+    margin: 10px 0px;
+}
+
+p{
+    font-size: 1.6rem;
+    line-height: 1.8rem;
 }
 
 a {
@@ -40,9 +55,6 @@ body {
     background-color:var(--background);
 }
 
-main {
-    background-color:var(--mainSectionBackground);
-}
 
 /* Header */
 .headerWrapper {
@@ -51,21 +63,75 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height:100vh;
+    height:15vh;
 }
 /* Main Info */
 .infoWrapper {
+    background: var(--mainSectionBackground);
     width:60%;
     text-align:center;
-    margin:0 auto;
+    margin:50px auto;
+    padding: 30px;
+    border-radius: 5px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: auto auto auto auto ;
 }
+
+.infoBox , .medicalItem{
+    padding: 40px 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.valueName{
+    font-size: 1.6rem;
+}
+
+.pollutionValue{
+    margin: 40px 0px;
+    font-size: 2.0rem;
+}
+
+.healthy{
+    background-color: var(--healthy);
+    color:white;
+}
+
+.moderate{
+    background-color: var(--moderate);
+    color:white;
+}
+
+.unhealthy{
+    background-color: var(--unhealthy);
+    color: white;
+}
+
+.hazardous{
+    background-color: var(--hazardous);
+    color: white;
+}
+
 /* Main Medical */
 .medicalWrapper {
-    width:60%;
+    width:80%;
+    background-color: var(--accentPurple);
+    padding: 30px;
+    border-radius: 5px;
     margin:0 auto;
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 } 
+
+.medicalItem{
+    background-color: var(--mainSectionBackground);
+    opacity: 0.6;
+}
+
 /* Footer */
 .footerWrapper {
   text-align: center;
