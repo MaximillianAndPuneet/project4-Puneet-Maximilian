@@ -20,7 +20,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     --background: #2B3964;
     --mainSectionBackground: #F7F5F3;
     --accentBlue: #809FBF;
-    --accentRed: #AC464A;
+    --accentPurple: #4c2f55;
     --accentYellow: #F2A31A;
 }
 
@@ -34,6 +34,16 @@ h1 {
     font-size:12rem;
     text-transform: uppercase;
     font-weight: 100;
+}
+
+h3{
+    font-size: 2.0rem;
+    margin: 10px 0px;
+}
+
+p{
+    font-size: 1.6rem;
+    line-height: 1.8rem;
 }
 
 a {
@@ -65,17 +75,15 @@ body {
     border-radius: 5px;
     display: grid;
     grid-gap: 30px;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto ;
 }
 
-.infoBox{
-    padding: 40px 0px;
+.infoBox , .medicalItem{
+    padding: 40px 20px;
     border-radius: 5px;
-    border: 1px solid lightgray;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .valueName{
@@ -109,12 +117,20 @@ body {
 
 /* Main Medical */
 .medicalWrapper {
-    width:60%;
+    width:80%;
+    background-color: var(--accentPurple);
+    padding: 30px;
+    border-radius: 5px;
     margin:0 auto;
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 } 
 
+.medicalItem{
+    background-color: var(--mainSectionBackground);
+    opacity: 0.6;
+}
 
 /* Footer */
 .footerWrapper {
