@@ -9,6 +9,8 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 
 /* ------------COLOR VARIABLES--------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
 :root{
     --healthy: #5caa71;
     --moderate: #809fbf;
@@ -24,11 +26,14 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 html {
     font-size:62.5%;
+    font-family: Roboto, sans-serif;
 }
 
 h1 {
     color:white;
-    font-size:25rem;
+    font-size:12rem;
+    text-transform: uppercase;
+    font-weight: 100;
 }
 
 a {
@@ -40,9 +45,6 @@ body {
     background-color:var(--background);
 }
 
-main {
-    background-color:var(--mainSectionBackground);
-}
 
 /* Header */
 .headerWrapper {
@@ -51,14 +53,60 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height:100vh;
+    height:15vh;
 }
 /* Main Info */
 .infoWrapper {
+    background: var(--mainSectionBackground);
     width:60%;
     text-align:center;
-    margin:0 auto;
+    margin:50px auto;
+    padding: 30px;
+    border-radius: 5px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: auto auto auto auto auto;
 }
+
+.infoBox{
+    padding: 40px 0px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.valueName{
+    font-size: 1.6rem;
+}
+
+.pollutionValue{
+    margin: 40px 0px;
+    font-size: 2.0rem;
+}
+
+.healthy{
+    background-color: var(--healthy);
+    color:white;
+}
+
+.moderate{
+    background-color: var(--moderate);
+    color:white;
+}
+
+.unhealthy{
+    background-color: var(--unhealthy);
+    color: white;
+}
+
+.hazardous{
+    background-color: var(--hazardous);
+    color: white;
+}
+
 /* Main Medical */
 .medicalWrapper {
     width:60%;
@@ -66,6 +114,8 @@ main {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
 } 
+
+
 /* Footer */
 .footerWrapper {
   text-align: center;
