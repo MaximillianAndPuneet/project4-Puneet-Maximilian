@@ -21,3 +21,76 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     --accentRed: #AC464A;
     --accentYellow: #F2A31A;
 }
+
+html {
+    font-size:62.5%;
+}
+
+h1 {
+    color:white;
+    font-size:25rem;
+}
+
+a {
+    text-decoration:none;
+    color:#ffffff;
+}
+
+body {
+    background-color:var(--background);
+}
+
+main {
+    background-color:var(--mainSectionBackground);
+}
+
+/* Header */
+.headerWrapper {
+    text-align:center;
+    background-image:url(./assets/headerTest.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+}
+/* Main Info */
+.infoWrapper {
+    width:60%;
+    text-align:center;
+    margin:0 auto;
+}
+/* Main Medical */
+.medicalWrapper {
+    width:60%;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+} 
+/* Footer */
+.footerWrapper {
+  text-align: center;
+  padding: 25px 0;
+  background-color: var(--background);
+}
+footer p {
+    color:#ffffff;
+}
+footer a:hover {
+    animation: buttonFlicker 1s;
+    color:var(--accentYellow);
+}
+@keyframes buttonFlicker {
+  0% {
+    color: var(--accentYellow);
+  }
+  50% {
+    color: #ffffff;
+  }
+  100% {
+    color: var(--accentYellow);
+  }
+}
+
+/* Responsive Tablet */
+
+/* Responsive Phone */
