@@ -14,7 +14,8 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 :root{
     --healthy: #5caa71;
     --moderate: #809fbf;
-    --unhealthy: #d99a39;
+    --unhealthy: #d9ae39;
+    --veryUnhealthy: #d96639;
     --hazardous: #f44336;
 
     --background: #2B3964;
@@ -27,11 +28,12 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 html {
     font-size:62.5%;
     font-family: Roboto, sans-serif;
+    overflow-x:hidden;
 }
 
 h1 {
     color:white;
-    font-size:12rem;
+    font-size:8rem;
     text-transform: uppercase;
     font-weight: 100;
 }
@@ -59,27 +61,89 @@ body {
 /* Header */
 .headerWrapper {
     text-align:center;
-    background-image:url(./assets/headerTest.jpg);
+    background-image:url(./assets/headerTest.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    height:15vh;
+    background-size: contain;
+    height:90vh;
 }
+.headerWrapper h1 {
+    text-align:right;
+    width:60%;
+    margin:10vh auto 45vh auto;
+}
+.headerWrapper a {
+    border:1px solid white;
+    padding:5px;
+    font-size:2.0rem;
+}
+.headerWrapper a:hover {
+    animation: buttonBlink 1s infinite;
+}
+@keyframes buttonBlink {
+  0% {
+    color: var(--accentBlue);
+  }
+  50% {
+    color: #ffffff;
+  }
+  100% {
+    color: var(--accentBlue);
+  }
+}
+.clouds{
+    background:url(./assets/clouds.png) no-repeat top center;
+    z-index:-1;
+    animation: moveClouds 20s infinite linear;
+    position:absolute;
+    width:150%;
+    height:100%;
+    display:block;
+}
+
+@keyframes moveClouds {
+    from {
+    left:-2500px
+    }
+    to {
+    left:2500px;
+    }
+}
+
+/* Main Colour*/
+.colourWrapper {
+    display:grid;
+    width:50%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align:center;
+    margin:0 auto;
+    padding:50px 0;
+}
+.colourBox {
+    height:75px;
+    width:75px;
+    margin:0 auto;
+    border-radius:50%;
+}
+.colourBox p {
+    margin-top:85px;
+}
+
 /* Main Info */
 .infoWrapper {
     background: var(--mainSectionBackground);
-    width:60%;
+    width:80%;
     text-align:center;
     margin:50px auto;
     padding: 30px;
     border-radius: 5px;
     display: grid;
     grid-gap: 30px;
-    grid-template-columns: auto auto auto auto ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .infoBox , .medicalItem{
-    padding: 40px 20px;
+    padding: 0 0 40px 0;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -88,11 +152,15 @@ body {
 
 .valueName{
     font-size: 1.6rem;
+    width:100%;
+    background-color:var(--accentPurple);
+    border-radius: 5px;
+    padding:20px;
 }
 
 .pollutionValue{
     margin: 40px 0px;
-    font-size: 2.0rem;
+    font-size: 6.0rem;
 }
 
 .healthy{
@@ -110,6 +178,11 @@ body {
     color: white;
 }
 
+.veryUnhealthy {
+    background-color: var(--veryUnhealthy);
+    color: white;
+}
+
 .hazardous{
     background-color: var(--hazardous);
     color: white;
@@ -118,7 +191,7 @@ body {
 /* Main Medical */
 .medicalWrapper {
     width:80%;
-    background-color: var(--accentPurple);
+    background-color: var(--mainSectionBackground);
     padding: 30px;
     border-radius: 5px;
     margin:0 auto;
@@ -128,8 +201,11 @@ body {
 } 
 
 .medicalItem{
-    background-color: var(--mainSectionBackground);
-    opacity: 0.6;
+    background-color: var(--accentPurple);
+    color:white;
+}
+.medicalItem p {
+    width:80%;
 }
 
 /* Footer */
