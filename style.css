@@ -69,7 +69,7 @@ body {
 }
 .headerWrapper h1 {
     text-align:right;
-    width:60%;
+    width:90%;
     margin:10vh auto 45vh auto;
 }
 .headerWrapper a {
@@ -203,9 +203,7 @@ body {
 .medicalItem{
     background-color: var(--accentPurple);
     color:white;
-}
-.medicalItem p {
-    width:80%;
+    padding: 20px;
 }
 
 /* Footer */
@@ -235,4 +233,31 @@ footer a:hover {
 
 /* Responsive Tablet */
 
+@media (max-width: 1200px){
+    .medicalWrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 1050px){
+    .infoWrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+}
 /* Responsive Phone */
+
+@media (max-width: 786px){
+    .medicalWrapper{
+        grid-template-columns: 1fr;
+    }
+    
+    .colourWrapper{
+        width: 90%;
+    }
+}
+
+@media(max-width: 548px){
+    .infoWrapper{
+        grid-template-columns: 1fr;
+    }
+}
