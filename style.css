@@ -203,9 +203,7 @@ body {
 .medicalItem{
     background-color: var(--accentPurple);
     color:white;
-}
-.medicalItem p {
-    width:80%;
+    padding: 20px;
 }
 
 /* Footer */
