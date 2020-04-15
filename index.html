@@ -10,31 +10,64 @@
     <!-- HEADER BEGINS -->
     <header>
         <div class='headerWrapper'>
-            <h1>Air Quality in Toronto</h1>
+            <div class="clouds"></div>
+            <h1>How bad is <span>Toronto's Air</span> Quality?</h1>
+            <a href="#colourWrapper">let's see</a>
         </div>
     </header>
     <!-- HEADER ENDS -->
 
     <!-- MAIN SECTION BEGINS -->
     <main>
+        <!-- OUTPUT COLOR SECTION BEGINS -->
+        <section>
+            <div class="colourWrapper" id="colourWrapper">
+                <div class="colourBox healthy">
+                    <div class="colourCircle">
+                    </div>
+                    <p>0-50<br>Healthy</p>
+                </div>
+                <div class="colourBox moderate">
+                    <div class="colourCircle">
+                    </div>
+                    <p>51-150 Moderate</p>
+                </div>
+                <div class="colourBox unhealthy">
+                    <div class="colourCircle">
+                    </div>
+                    <p>151-200 Unhealthy</p>
+                </div>
+                <div class="colourBox veryUnhealthy">
+                    <div class="colourCircle">
+                    </div>
+                    <p>201-300 Very Unhealthy</p>
+                </div>
+                <div class="colourBox hazardous">
+                    <div class="colourCircle">
+                    </div>
+                    <p>300+ Hazardous</p>
+                </div>
+            </div>
+        </section>
+        <!-- OUTPUT COLOR SECTION ENDS -->
         <!-- TORONTO OUTPUT SECTION BEGINS -->
         <section>
             <div class="infoWrapper">
-                <div class="infoBox healthy">
-                    <p class='valueName'>LABEL</p>
-                    <p class='pollutionValue'>value</p>
+                <div class="infoBox  healthy">
+                    <p class='valueName '>Nitrogen Dioxide</p>
+                    <p class='pollutionValue' id='no2Value'>value</p>
                 </div>
                 <div class="infoBox moderate">
-                    <p class='valueName'>LABEL</p>
-                    <p class='pollutionValue'>value</p>
+                    <p class='valueName'>Ozone</p>
+                    <p class='pollutionValue' id='o3Value'>value</p>
                 </div>
                 <div class="infoBox unhealthy">
-                    <p class='valueName'>LABEL</p>
-                    <p class='pollutionValue'>value</p>
+                    <p class='valueName'>Particulate Matter</p>
+                    <p class='pollutionValue' id='pm25Value'>value</p>
                 </div>
                 <div class="infoBox hazardous">
-                    <p class='valueName'>LABEL</p>
-                    <p class='pollutionValue'>value</p>
+                    <p class='valueName'>Sulphur Dioxide</p>
+                    <p class='pollutionValue' id='so2Value'>value</p>
                 </div>
             </div>
         </section>
@@ -52,7 +85,7 @@
                     </p>
                 </div>
                 <div class="medicalItem airParticulate">
-                    <h3>Air Particulates PM10/PM2.5</h3>
+                    <h3>Air Particulates PM2.5</h3>
                     <p>Particulate matter is the sum of all solid and liquid particles suspended in air many of which are hazardous. This complex mixture includes both organic and inorganic particles, such as dust, pollen, soot, smoke, and liquid droplets. These particles vary greatly in size, composition, and origin.</p>
                 </div>
                 <div class="medicalItem">
