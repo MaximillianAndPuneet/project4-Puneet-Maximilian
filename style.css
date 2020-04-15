@@ -68,6 +68,7 @@ body {
     height:90vh;
 }
 .headerWrapper h1 {
+    max-width: 1600px;
     text-align:right;
     width:90%;
     margin:10vh auto 45vh auto;
@@ -114,6 +115,7 @@ body {
 .colourWrapper {
     display:grid;
     width:50%;
+    max-width: 1400px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     text-align:center;
     margin:0 auto;
@@ -133,6 +135,7 @@ body {
 .infoWrapper {
     background: var(--mainSectionBackground);
     width:80%;
+    max-width: 1400px;
     text-align:center;
     margin:50px auto;
     padding: 30px;
@@ -191,6 +194,7 @@ body {
 /* Main Medical */
 .medicalWrapper {
     width:80%;
+    max-width: 1400px;
     background-color: var(--mainSectionBackground);
     padding: 30px;
     border-radius: 5px;
