@@ -57,6 +57,9 @@ body {
     background-color:var(--background);
 }
 
+span {
+    display:block;
+}
 
 /* Header */
 .headerWrapper {
@@ -70,7 +73,7 @@ body {
 .headerWrapper h1 {
     max-width: 1600px;
     text-align:right;
-    width:90%;
+    width:75%;
     margin:10vh auto 45vh auto;
 }
 .headerWrapper a {
@@ -240,6 +243,11 @@ footer a:hover {
 }
 
 /* Responsive Tablet */
+@media (max-width:1400px){
+    .colourWrapper {
+        width:80%;
+    }
+}
 
 @media (max-width: 1200px){
     .medicalWrapper{
@@ -251,16 +259,22 @@ footer a:hover {
     .infoWrapper{
         grid-template-columns: 1fr 1fr;
     }
+    h1 {
+        font-size:7.0rem;
+        margin-bottom:20vh;
+    }
 }
 /* Responsive Phone */
 
 @media (max-width: 786px){
     .medicalWrapper{
         grid-template-columns: 1fr;
-    }
-    
+    }   
     .colourWrapper{
         width: 90%;
+    }
+    h1 {
+        font-size:6.0rem;
     }
 }
 
