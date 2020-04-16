@@ -208,8 +208,12 @@ body {
     background-color: var(--accentPurple);
     color:white;
     padding: 20px;
+    opacity: 0.7
 }
 
+.highlight{
+    opacity: 1;
+}
 /* Footer */
 .footerWrapper {
   text-align: center;

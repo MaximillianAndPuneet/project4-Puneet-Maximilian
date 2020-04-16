@@ -32,10 +32,25 @@ airQualityApp.updateDOM = (cityData) => {
 
 //Evaluate data and change styling accordingly
 
-
+//Add hover effects
+airQualityApp.hover = () =>{
+    $("#no2Value").hover(() =>{
+        $("#no2Info").toggleClass("highlight");
+    })
+    $("#o3Value").hover(() =>{
+        $("#o3Info").toggleClass("highlight");
+    })
+    $("#pm25Value").hover(() =>{
+        $("#pm25Info").toggleClass("highlight");
+    })
+    $("#so2Value").hover(() =>{
+        $("#so2Info").toggleClass("highlight");
+    })
+}
 
 airQualityApp.init = () => {
     airQualityApp.getInfo();
+    airQualityApp.hover();
 }
 
 
