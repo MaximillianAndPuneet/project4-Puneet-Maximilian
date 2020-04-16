@@ -30,20 +30,46 @@ airQualityApp.updateDOM = (cityData) => {
     $("#so2Value").html(`${cityData.sulphurDiox}`);
 }
 
-//Evaluate data and change styling accordingly
+//Add values to DOM
+airQualityApp.updateDOM = (cityData) => {
+    //adding the values to DOM
+    console.log(cityData);
+
+    $("#no2Value").html(`${cityData.no2}`);
+    $("#o3Value").html(`${cityData.ozone}`);
+    $("#pm25Value").html(`${cityData.partMatter}`);
+    $("#so2Value").html(`${cityData.sulphurDiox}`);
+    // }
+    
+    //Evaluate data and change styling accordingly
+    const pollutionHolder = Object.keys(cityData); 
+    const valueHolder = Object.values(cityData);
+    for (i=0; i < valueHolder.length; i++){
+        if (valueHolder[i] > 300) {
+            console.log('HAZARDOUS')
+            $("#" + `${pollutionHolder[i]}` + "Colour").addClass('hazardous');
+        } else if ( 300 > valueHolder[i] > 200 ) {
+            $("#" + `${pollutionHolder[i]}` + "Colour").addClass('veryUnhealthy');
+        } else if ( 200 > valueHolder[i] > 100) {
+            $("#" + `${pollutionHolder[i]}` + "Colour").addClass('unhealthy');
+        } else  {
+            $("#" + `${pollutionHolder[i]}` + "Colour").addClass("healthy");
+        }           
+    }
+}
 
 //Add hover effects
 airQualityApp.hover = () =>{
-    $("#no2Value").hover(() =>{
+    $("#no2Colour").hover(() =>{
         $("#no2Info").toggleClass("highlight");
     })
-    $("#o3Value").hover(() =>{
+    $("#ozoneColour").hover(() =>{
         $("#o3Info").toggleClass("highlight");
     })
-    $("#pm25Value").hover(() =>{
+    $("#partMatterColour").hover(() =>{
         $("#pm25Info").toggleClass("highlight");
     })
-    $("#so2Value").hover(() =>{
+    $("#sulphurDioxColour").hover(() =>{
         $("#so2Info").toggleClass("highlight");
     })
 }
