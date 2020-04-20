@@ -242,6 +242,34 @@ footer a:hover {
   }
 }
 
+/* Stretch Goals */
+
+#stretchgoal,
+#cityWorking {
+    margin: 0 auto;
+    text-align:center;
+    color:white;
+}
+#stretchgoal {
+    padding: 75px 0 25px 0;
+
+}
+
+#stretchgoal button,
+#stretchgoal input {
+    border:1px solid white;
+    padding:5px;
+    font-size:2.0rem;
+    background-color: var(--background);
+    color:white;
+}
+#stretchgoal button:hover {
+    animation: buttonBlink 1s infinite;
+}
+#stretchgoal h3 {
+    padding: 25px 0;
+    font-size:5.0rem;
+}
 /* Responsive Tablet */
 @media (max-width:1400px){
     .colourWrapper {
