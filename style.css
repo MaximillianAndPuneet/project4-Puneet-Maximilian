@@ -57,6 +57,12 @@ body {
     background-color:var(--background);
 }
 
+span {
+    display:block;
+}
+form {
+    padding-bottom:100px;
+}
 
 /* Header */
 .headerWrapper {
@@ -70,7 +76,7 @@ body {
 .headerWrapper h1 {
     max-width: 1600px;
     text-align:right;
-    width:90%;
+    width:75%;
     margin:10vh auto 45vh auto;
 }
 .headerWrapper a {
@@ -239,7 +245,40 @@ footer a:hover {
   }
 }
 
+/* Stretch Goals */
+
+#stretchgoal,
+#cityWorking {
+    margin: 0 auto;
+    text-align:center;
+    color:white;
+}
+#stretchgoal {
+    padding: 75px 0 25px 0;
+
+}
+
+#stretchgoal button,
+#stretchgoal input {
+    border:1px solid white;
+    padding:5px;
+    font-size:2.0rem;
+    background-color: var(--background);
+    color:white;
+}
+#stretchgoal button:hover {
+    animation: buttonBlink 1s infinite;
+}
+#stretchgoal h3 {
+    padding: 25px 0;
+    font-size:5.0rem;
+}
 /* Responsive Tablet */
+@media (max-width:1400px){
+    .colourWrapper {
+        width:80%;
+    }
+}
 
 @media (max-width: 1200px){
     .medicalWrapper{
@@ -251,16 +290,22 @@ footer a:hover {
     .infoWrapper{
         grid-template-columns: 1fr 1fr;
     }
+    h1 {
+        font-size:7.0rem;
+        margin-bottom:20vh;
+    }
 }
 /* Responsive Phone */
 
 @media (max-width: 786px){
     .medicalWrapper{
         grid-template-columns: 1fr;
-    }
-    
+    }   
     .colourWrapper{
         width: 90%;
+    }
+    h1 {
+        font-size:6.0rem;
     }
 }
 
