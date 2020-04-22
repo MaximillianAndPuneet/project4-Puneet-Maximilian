@@ -8,7 +8,6 @@ airQualityApp.getInfo = () => {
         method: 'GET',
         dataType: 'jsonp'
     }).then((result) => {
-        console.log(result)
         requiredData = {
             no2: result.data.iaqi.no2.v,
             ozone: result.data.iaqi.o3.v,
@@ -22,8 +21,6 @@ airQualityApp.getInfo = () => {
 //Add values to DOM
 airQualityApp.updateDOM = (cityData) => {
     //adding the values to DOM
-    console.log(cityData);
- 
     $("#no2Value").html(`${cityData.no2}`);
     $("#o3Value").html(`${cityData.ozone}`);
     $("#pm25Value").html(`${cityData.partMatter}`);
@@ -73,7 +70,6 @@ $("#cityNameButton").on("click", function () {
             method: 'GET',
             dataType: 'jsonp'
         }).then((result2) => {
-            console.log(result2)
             if (result2.status == 'error') {
                 $('#cityWorking').html("Oops. That query provided no result.")
                 return
@@ -93,8 +89,6 @@ $("#cityNameButton").on("click", function () {
 
 airQualityApp.updateDOM2 = (cityData2) => {
     //adding the values to DOM
-    // console.log(cityData);
-
     $("#no2Value2").html(`${cityData2.no2}`);
     $("#o3Value2").html(`${cityData2.ozone}`);
     $("#pm25Value2").html(`${cityData2.partMatter}`);
